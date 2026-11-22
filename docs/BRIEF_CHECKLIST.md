@@ -122,32 +122,32 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P5 – Vedang Chinhalli: Hit Predictor (`P5_hit_predictor.ipynb`)
 
 **How it works**
-- [ ] 1. Label hit = popularity ≥ threshold; imbalanced classes
-- [ ] 2. Decision tree: yes/no splits, Gini/entropy, depth tuned
-- [ ] 3. Random Forest (bagging): random samples + feature subsets, voting
-- [ ] 4. AdaBoost (boosting): stumps focusing on previous mistakes
-- [ ] 5. Imbalance: class weights; judge by F1 and ROC-AUC
-- [ ] 6. Explaining hits: forest feature importance + top tree levels as rules
+- [x] 1. Label hit = popularity ≥ threshold; imbalanced classes
+- [x] 2. Decision tree: yes/no splits, Gini/entropy, depth tuned
+- [x] 3. Random Forest (bagging): random samples + feature subsets, voting
+- [x] 4. AdaBoost (boosting): stumps focusing on previous mistakes
+- [x] 5. Imbalance: class weights; judge by F1 and ROC-AUC
+- [x] 6. Explaining hits: forest feature importance + top tree levels as rules
 
 **Concepts**
-- [ ] Decision trees: Gini vs entropy, information gain, depth/overfitting, pruning
-- [ ] Ensembles: bagging vs boosting; forest stability; AdaBoost reweighting
-- [ ] Class imbalance: accuracy paradox; precision vs recall
-- [ ] ROC-AUC
-- [ ] Feature importance
+- [x] Decision trees: Gini vs entropy, information gain, depth/overfitting, pruning
+- [x] Ensembles: bagging vs boosting; forest stability; AdaBoost reweighting
+- [x] Class imbalance: accuracy paradox; precision vs recall
+- [x] ROC-AUC
+- [x] Feature importance
 
 **What you will show**
-- [ ] Drawn decision tree (top levels) as "rules for a hit"
-- [ ] Feature-importance chart
-- [ ] F1 and ROC-AUC for tree vs RF vs AdaBoost + ROC curve
-- [ ] Honest limit: sound explains only part of a hit
+- [x] Drawn decision tree (top levels) as "rules for a hit"
+- [x] Feature-importance chart
+- [x] F1 and ROC-AUC for tree vs RF vs AdaBoost + ROC curve
+- [x] Honest limit: sound explains only part of a hit
 
 **Questions**
-- [ ] Gini vs entropy
-- [ ] Why RF beats a tree? Bagging vs boosting?
-- [ ] Why not accuracy?
-- [ ] ROC-AUC = 0.5 vs 1.0
-- [ ] Does importance mean causation?
+- [x] Gini vs entropy
+- [x] Why RF beats a tree? Bagging vs boosting?
+- [x] Why not accuracy?
+- [x] ROC-AUC = 0.5 vs 1.0
+- [x] Does importance mean causation?
 
 ## P6 – Krish Jai Ganesh: Neural Network & Model Arena (`P6_neural_net_arena.ipynb`)
 
