@@ -4,7 +4,11 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-import ui
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # find app/ui.py
+import ui  # noqa: E402
 
 ui.setup_page("Song Lab & Model Arena", "🧪")
 S, X = ui.load_songs()
