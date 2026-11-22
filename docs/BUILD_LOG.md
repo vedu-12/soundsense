@@ -131,3 +131,8 @@
   6. Minor: Home genre card names its model ("neural network"); P4 wording (section reference, "16 columns" description, results-table header); demo-script "mixed bar" wording; Chill emoji changed to 😌 (☕ rendered as a tiny glyph); README notes on popularity and train/test tags.
 - Checks run: 75 tests pass; affected notebooks (P1, P2, P4, P5, P6, P7) re-executed; screenshots retaken.
 - Decisions I made: tag `v1.0` was pushed before the review; the post-review final state is tagged `v1.1` (no force-push / tag rewrite).
+
+## Extra (after Block 14): song preview button  (commit "App: add Spotify preview button")
+- Built: a small speaker icon (🔊, borderless) next to the title on each page's main song card; clicking it opens a compact Spotify embed player (preview clip, chosen by Spotify) for that track_id.
+- Checks run: 19 app tests pass; screenshot of the open player reviewed.
+- Decisions I made: requested by the user, this **overrides the CLAUDE.md "no external images" rule** (the Spotify player shows the album cover, only after clicking). Needs internet; the rest of the app still works offline. Spotify decides which part of the song the preview plays; the start point can't be chosen.

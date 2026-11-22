@@ -258,9 +258,18 @@ def song_card(song_id, extra_html="", show_radar=True, show_mood=False, key=None
                       if row.split == "test" else
                       "<span class='ss-chip' title='The models learned from this song'>📚 training song</span>")
     with st.container(border=True):
-        st.markdown(f"<div class='ss-title' title=\"{row.track_name}\">{row.track_name}</div>"
-                    f"<div class='ss-artist'>{row.artists_display}</div>{genre_chip(row.track_genre)}{split_html}{extra_html}",
-                    unsafe_allow_html=True)
+        html = (f"<div class='ss-title' title=\"{row.track_name}\">{row.track_name}</div>"
+                f"<div class='ss-artist'>{row.artists_display}</div>{genre_chip(row.track_genre)}{split_html}{extra_html}")
+        if show_split:                           # main cards: a small speaker that opens a Spotify preview player
+            text_col, play_col = st.columns([6, 1], gap="small", vertical_alignment="top")
+            with text_col:
+                st.markdown(html, unsafe_allow_html=True)
+            with play_col:
+                with st.popover("", icon=":material/volume_up:", type="tertiary", help="Listen on Spotify (needs internet)",
+                                key=f"play_{key or song_id}"):
+                    st.iframe(f"https://open.spotify.com/embed/track/{row.track_id}?theme=0", width=300, height=80)
+        else:
+            st.markdown(html, unsafe_allow_html=True)
         if show_mood:
             st.markdown(mood_mix_html(song_id), unsafe_allow_html=True)
         if show_radar:
