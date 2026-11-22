@@ -36,32 +36,32 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P2 – Gunneet Singh: Happiness Meter (`P2_happiness_meter.ipynb`)
 
 **How it works**
-- [ ] 1. Inputs = all audio features except valence; target = valence
-- [ ] 2. Linear regression as weighted sum; weights' meaning
-- [ ] 3. Least squares: normal equation or gradient descent
-- [ ] 4. Polynomial features: helps or overfits?
-- [ ] 5. Ridge (L2) and Lasso (L1); alpha picked by CV
-- [ ] 6. Bonus: same models predict popularity; weaker results explained
+- [x] 1. Inputs = all audio features except valence; target = valence
+- [x] 2. Linear regression as weighted sum; weights' meaning
+- [x] 3. Least squares: normal equation or gradient descent
+- [x] 4. Polynomial features: helps or overfits?
+- [x] 5. Ridge (L2) and Lasso (L1); alpha picked by CV
+- [x] 6. Bonus: same models predict popularity; weaker results explained
 
 **Concepts**
-- [ ] Linear regression and what each weight means
-- [ ] Least squares = maximum likelihood under Gaussian errors
-- [ ] Overfitting and bias–variance (polynomial features)
-- [ ] Regularization: Ridge vs Lasso, alpha, why Lasso gives zeros
-- [ ] Metrics: RMSE, MAE, R²
+- [x] Linear regression and what each weight means
+- [x] Least squares = maximum likelihood under Gaussian errors
+- [x] Overfitting and bias–variance (polynomial features)
+- [x] Regularization: Ridge vs Lasso, alpha, why Lasso gives zeros
+- [x] Metrics: RMSE, MAE, R²
 
 **What you will show**
-- [ ] Bar chart of weights (happier vs sadder features)
-- [ ] Predicted vs actual valence scatter plot
-- [ ] RMSE and R² for plain, polynomial, Ridge, Lasso + features Lasso dropped
-- [ ] Popularity result and why it is low
+- [x] Bar chart of weights (happier vs sadder features)
+- [x] Predicted vs actual valence scatter plot
+- [x] RMSE and R² for plain, polynomial, Ridge, Lasso + features Lasso dropped
+- [x] Popularity result and why it is low
 
 **Questions**
-- [ ] What does R² = 0.4 mean in plain words?
-- [ ] L1 vs L2, why Lasso sets weights to zero
-- [ ] Assumptions of linear regression
-- [ ] Why popularity is harder than valence
-- [ ] How alpha was picked
+- [x] What does R² = 0.4 mean in plain words?
+- [x] L1 vs L2, why Lasso sets weights to zero
+- [x] Assumptions of linear regression
+- [x] Why popularity is harder than valence
+- [x] How alpha was picked
 
 ## P3 – Shreyash Lakshmi Narayan: Genre Detector (`P3_genre_detector.ipynb`)
 
