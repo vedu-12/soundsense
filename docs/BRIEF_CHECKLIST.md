@@ -152,31 +152,31 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P6 – Krish Jai Ganesh: Neural Network & Model Arena (`P6_neural_net_arena.ipynb`)
 
 **How it works**
-- [ ] 1. MLP: inputs, hidden ReLU layers, task-specific output (softmax / sigmoid / linear)
-- [ ] 2. Training: forward pass, loss, backpropagation, Adam, epochs
-- [ ] 3. Avoid overfitting: train vs validation loss, early stopping, weight penalty, CV tuning of neurons and learning rate
-- [ ] 4. Model Arena: every model's scores in one table per task
-- [ ] 5. Bootstrap ranges; with vs without PCA
+- [x] 1. MLP: inputs, hidden ReLU layers, task-specific output (softmax / sigmoid / linear)
+- [x] 2. Training: forward pass, loss, backpropagation, Adam, epochs
+- [x] 3. Avoid overfitting: train vs validation loss, early stopping, weight penalty, CV tuning of neurons and learning rate
+- [x] 4. Model Arena: every model's scores in one table per task
+- [x] 5. Bootstrap ranges; with vs without PCA
 
 **Concepts**
-- [ ] Neurons and layers; without activations it's linear
-- [ ] Activations: ReLU, sigmoid, softmax
-- [ ] Backpropagation and gradient descent; learning rate, epochs
-- [ ] Overfitting in networks: curves, early stopping, regularization
-- [ ] Fair comparison: same split/metrics, CV, bootstrap intervals
+- [x] Neurons and layers; without activations it's linear
+- [x] Activations: ReLU, sigmoid, softmax
+- [x] Backpropagation and gradient descent; learning rate, epochs
+- [x] Overfitting in networks: curves, early stopping, regularization
+- [x] Fair comparison: same split/metrics, CV, bootstrap intervals
 
 **What you will show**
-- [ ] Network diagram (inputs → hidden → output)
-- [ ] Training vs validation loss curve
-- [ ] Model Arena tables (genre, hit, valence), winners and why
-- [ ] Song Lab demo: raise energy and loudness → guess moves towards metal
+- [x] Network diagram (inputs → hidden → output)
+- [x] Training vs validation loss curve
+- [x] Model Arena tables (genre, hit, valence), winners and why
+- [x] Song Lab demo: raise energy and loudness → guess moves towards metal
 
 **Questions**
-- [ ] Why activation functions?
-- [ ] Backpropagation in two sentences
-- [ ] How hidden neurons were chosen
-- [ ] Why NNs don't always win on small tabular data
-- [ ] How do you know the winner isn't lucky?
+- [x] Why activation functions?
+- [x] Backpropagation in two sentences
+- [x] How hidden neurons were chosen
+- [x] Why NNs don't always win on small tabular data
+- [x] How do you know the winner isn't lucky?
 
 ## P7 – Palakollu Sai Nikhil Reddy: Mood Playlists (`P7_mood_playlists.ipynb`)
 

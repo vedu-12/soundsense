@@ -1,0 +1,4 @@
+task,winner,runner-up,mean difference,95% CI of difference,clearly better?
+genre,MLP (neural network),SVM (linear),0.003740046838407494,"[-0.021, +0.027]",no (could be luck)
+hit,Random Forest,AdaBoost (stumps),0.026398934500717373,"[-0.002, +0.060]",no (could be luck)
+valence,MLP (neural network),Lasso (LassoCV),0.026651593896107044,"[-0.023, +0.078]",no (could be luck)

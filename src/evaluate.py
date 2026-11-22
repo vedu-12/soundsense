@@ -137,3 +137,28 @@ def log_baselines():
 
 if __name__ == "__main__":
     print(log_baselines().to_string())
+
+
+PRED_DIR = ROOT / "results" / "predictions"
+
+
+def save_predictions(task, model_name, index, y_pred, y_score=None, y_true=None):
+    """Store a model's test-set predictions in results/predictions/<task>.csv (one column per model).
+
+    Used by the Model Arena (bootstrap intervals, confusion matrices). y_score = probability of a hit.
+    """
+    path = PRED_DIR / f"{task}.csv"
+    index = pd.Index(index, name="song_id")
+    df = pd.read_csv(path, index_col="song_id") if path.exists() else pd.DataFrame(index=index)
+    df = df.reindex(df.index.union(index))
+    if y_true is not None:
+        df.loc[index, "_true"] = np.asarray(y_true)
+    df.loc[index, model_name] = np.asarray(y_pred)
+    if y_score is not None:
+        df.loc[index, f"{model_name} [score]"] = np.asarray(y_score)
+    PRED_DIR.mkdir(parents=True, exist_ok=True)
+    df.to_csv(path)
+
+
+def load_predictions(task):
+    return pd.read_csv(PRED_DIR / f"{task}.csv", index_col="song_id")

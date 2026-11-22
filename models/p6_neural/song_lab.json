@@ -1,0 +1,72 @@
+{
+  "base_song": {
+    "danceability": 0.532,
+    "energy": 0.673,
+    "loudness": -6.67,
+    "speechiness": 0.0483,
+    "acousticness": 0.16,
+    "instrumentalness": 4.19e-05,
+    "liveness": 0.133,
+    "valence": 0.441,
+    "tempo": 119.935,
+    "duration_ms": 208551.0,
+    "explicit": 0.0,
+    "mode": 1.0,
+    "key_C#": 0.0,
+    "key_D": 0.0,
+    "key_D#": 0.0,
+    "key_E": 0.0,
+    "key_F": 0.0,
+    "key_F#": 0.0,
+    "key_G": 0.0,
+    "key_G#": 0.0,
+    "key_A": 0.0,
+    "key_A#": 0.0,
+    "key_B": 0.0,
+    "time_sig_3": 0.0,
+    "time_sig_5": 0.0,
+    "time_sig_other": 0.0
+  },
+  "ranges": {
+    "danceability": [
+      0.144,
+      0.9
+    ],
+    "energy": [
+      0.012094000000000002,
+      0.99
+    ],
+    "loudness": [
+      -32.03044,
+      -2.167159999999989
+    ],
+    "speechiness": [
+      0.0255,
+      0.369
+    ],
+    "acousticness": [
+      7.869e-06,
+      0.995
+    ],
+    "instrumentalness": [
+      0.0,
+      0.9573400000000001
+    ],
+    "liveness": [
+      0.044198,
+      0.9316800000000004
+    ],
+    "valence": [
+      0.0386,
+      0.946
+    ],
+    "tempo": [
+      64.75466,
+      194.08924000000002
+    ],
+    "duration_ms": [
+      51620.840000000004,
+      596993.2600000004
+    ]
+  }
+}
