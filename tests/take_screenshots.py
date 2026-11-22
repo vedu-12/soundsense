@@ -44,6 +44,15 @@ def main():
                 page.screenshot(path=str(OUT / f"{name}.png"), full_page=True)
                 page.set_viewport_size({"width": 1440, "height": 900})
                 print(f"{name}: saved{'  (EXCEPTION ON PAGE)' if errs else ''}")
+                if name == "6_song_lab":                       # second tab
+                    page.get_by_role("tab", name="Model Arena").click()
+                    time.sleep(4)
+                    h = page.evaluate("() => { const m = document.querySelector('[data-testid=\"stMain\"]'); return m ? m.scrollHeight : 900 }")
+                    page.set_viewport_size({"width": 1440, "height": max(900, min(int(h) + 40, 6000))})
+                    time.sleep(2)
+                    page.screenshot(path=str(OUT / "6b_model_arena.png"), full_page=True)
+                    page.set_viewport_size({"width": 1440, "height": 900})
+                    print("6b_model_arena: saved")
             browser.close()
     finally:
         proc.terminate()
