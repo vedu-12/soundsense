@@ -181,29 +181,29 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P7 – Palakollu Sai Nikhil Reddy: Mood Playlists (`P7_mood_playlists.ipynb`)
 
 **How it works**
-- [ ] 1. Mood features: energy, valence, tempo, acousticness, danceability (scaled); no genre
-- [ ] 2. k-means loop; k via elbow and silhouette
-- [ ] 3. Hierarchical clustering on ~1–2k sample; dendrogram; cutting the tree
-- [ ] 4. GMM via EM: E-step, M-step; soft mood mix
-- [ ] 5. Naming moods from cluster averages
-- [ ] 6. Checks: silhouette of the three methods; ARI vs genres
+- [x] 1. Mood features: energy, valence, tempo, acousticness, danceability (scaled); no genre
+- [x] 2. k-means loop; k via elbow and silhouette
+- [x] 3. Hierarchical clustering on ~1–2k sample; dendrogram; cutting the tree
+- [x] 4. GMM via EM: E-step, M-step; soft mood mix
+- [x] 5. Naming moods from cluster averages
+- [x] 6. Checks: silhouette of the three methods; ARI vs genres
 
 **Concepts**
-- [ ] Unsupervised vs supervised
-- [ ] k-means: loop, choosing k, weaknesses
-- [ ] Hierarchical: agglomerative, linkage (Ward/average/complete), dendrogram
-- [ ] GMM and EM: hard vs soft, E/M steps, k-means as special case, local optima
-- [ ] Evaluation without labels: elbow, silhouette, ARI
+- [x] Unsupervised vs supervised
+- [x] k-means: loop, choosing k, weaknesses
+- [x] Hierarchical: agglomerative, linkage (Ward/average/complete), dendrogram
+- [x] GMM and EM: hard vs soft, E/M steps, k-means as special case, local optima
+- [x] Evaluation without labels: elbow, silhouette, ARI
 
 **What you will show**
-- [ ] Elbow and silhouette plots, chosen number of moods
-- [ ] Mood clusters on P1's 2D Song Map
-- [ ] Table of mood averages + names + example songs per mood
-- [ ] Dendrogram, one song's GMM mood mix, moods vs genres
+- [x] Elbow and silhouette plots, chosen number of moods
+- [x] Mood clusters on P1's 2D Song Map
+- [x] Table of mood averages + names + example songs per mood
+- [x] Dendrogram, one song's GMM mood mix, moods vs genres
 
 **Questions**
-- [ ] How was the number of moods chosen?
-- [ ] Hard vs soft clustering
-- [ ] E-step and M-step in simple words
-- [ ] Why two k-means runs can differ
-- [ ] Do moods match genres?
+- [x] How was the number of moods chosen?
+- [x] Hard vs soft clustering
+- [x] E-step and M-step in simple words
+- [x] Why two k-means runs can differ
+- [x] Do moods match genres?

@@ -1,0 +1,32 @@
+{
+  "moods": [
+    "Party",
+    "Chill",
+    "Sad",
+    "Intense"
+  ],
+  "emoji": {
+    "Party": "\ud83c\udf89",
+    "Chill": "\u2615",
+    "Sad": "\ud83c\udf27\ufe0f",
+    "Intense": "\ud83d\udd25"
+  },
+  "colors": {
+    "Party": "#3987e5",
+    "Chill": "#d95926",
+    "Sad": "#199e70",
+    "Intense": "#c98500"
+  },
+  "kmeans_cluster_names": {
+    "0": "Party",
+    "1": "Chill",
+    "2": "Intense",
+    "3": "Sad"
+  },
+  "gmm_component_names": {
+    "0": "Chill",
+    "1": "Party",
+    "2": "Sad",
+    "3": "Intense"
+  }
+}
