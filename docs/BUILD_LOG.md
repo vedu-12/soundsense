@@ -45,3 +45,9 @@
   - `AUDIO_FEATURES` (the 10 continuous ones) is also exported: distance-based **unsupervised** parts (PCA Song Map, DBSCAN, recommender) use these, because 11 scaled key dummies would otherwise dominate distances (two songs in different keys would look far apart regardless of sound). Supervised models use all 26 features.
   - `load_all_songs()` returns a tuple (songs table, scaled X) with the same index, since the table has both original and scaled values of the same feature names.
 - **Pipeline is now FROZEN.**
+
+## Block 4: Shared evaluation src/evaluate.py  (commit see git log: "Block 4: shared evaluation")
+- Built: `src/evaluate.py` (`classification_metrics`, `regression_metrics`, `clustering_metrics`, `log_score`, `load_scores`, `plot_confusion_matrix`, `bootstrap_ci`, `log_baselines`; `python -m src.evaluate` logs the baselines), `results/scores.csv`, `tests/test_block4.py`.
+- Checks run: 18 tests pass. Dummy genre accuracy 18.0% (≈ 1/6). Rerunning `python -m src.evaluate` keeps 4 rows (no duplicates); `log_score` replace-on-rerun tested on a temp file (1 row after two identical logs).
+- Key numbers: genre dummy accuracy 0.180 / macro F1 0.178; hit dummy F1 0.027, ROC-AUC 0.465; valence dummy RMSE 0.224, R² −0.002; popularity dummy RMSE 26.4.
+- Decisions I made: besides the genre dummy, I also logged dummy baselines for hit, valence and popularity (component "baseline"), so the Model Arena can show "beats guessing" for every task; so scores.csv has 4 rows (one per task) instead of 1. For binary tasks precision/recall/F1 are for the hit class; `macro_f1` is also stored. Added `bootstrap_ci` here for reuse in P6.
