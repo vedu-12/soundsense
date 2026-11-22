@@ -11,3 +11,10 @@
   3. P6 brief says tune hidden neurons and **learning rate**; CLAUDE.md says hidden size and **alpha**. The notebook tunes all three with a small CV grid.
   4. P1 brief says "duplicate track_ids are removed"; CLAUDE.md additionally removes tracks in more than one chosen genre and same name+artist duplicates. Both are done.
   5. Hit threshold "≥ 70" in briefs/proposal may change by the CLAUDE.md fallback rule if the hit rate is under 5% (decided in Block 2).
+- Repo URL: https://github.com/vedu-12/soundsense (private)
+
+## Block 1: Get the data  (commit see git log: "Block 1: get the data")
+- Built: `data/raw/spotify_tracks.csv` (20.1 MB, from the Hugging Face URL in CLAUDE.md, first try), `tests/test_block1.py`.
+- Checks run: all tests pass (6). Raw CSV has 114,000 rows.
+- Key numbers: 114,000 rows; 20 columns (+ unnamed index): track_id, artists, album_name, track_name, popularity, duration_ms, explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time_signature, track_genre. **114 unique genres** (briefs/proposal say 125; the real file has 114). Missing values: 1 each in artists, album_name, track_name (same row). Duplicate track_ids: 24,259.
+- Decisions I made: None (no cleaning yet). Raw CSV is git-ignored; test skips if absent so a fresh clone still passes.
