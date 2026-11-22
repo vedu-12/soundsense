@@ -66,30 +66,30 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P3 – Shreyash Lakshmi Narayan: Genre Detector (`P3_genre_detector.ipynb`)
 
 **How it works**
-- [ ] 1. Logistic regression and Gaussian NB on the same shared split
-- [ ] 2. Logistic regression: weighted sums + softmax, cross-entropy, C tuned by CV
-- [ ] 3. Naive Bayes: per-genre bell curves, Bayes' rule, independence assumption
-- [ ] 4. Compare accuracy, macro F1, confusion matrices; which genres are mixed up
+- [x] 1. Logistic regression and Gaussian NB on the same shared split
+- [x] 2. Logistic regression: weighted sums + softmax, cross-entropy, C tuned by CV
+- [x] 3. Naive Bayes: per-genre bell curves, Bayes' rule, independence assumption
+- [x] 4. Compare accuracy, macro F1, confusion matrices; which genres are mixed up
 
 **Concepts**
-- [ ] Logistic regression: sigmoid/softmax, linear boundaries, cross-entropy, regularization
-- [ ] Naive Bayes: Bayes' rule, independence, Gaussian likelihoods
-- [ ] Generative vs discriminative
-- [ ] Metrics: accuracy, precision, recall, F1, macro F1
-- [ ] Confusion matrix: rows = true, columns = predicted
+- [x] Logistic regression: sigmoid/softmax, linear boundaries, cross-entropy, regularization
+- [x] Naive Bayes: Bayes' rule, independence, Gaussian likelihoods
+- [x] Generative vs discriminative
+- [x] Metrics: accuracy, precision, recall, F1, macro F1
+- [x] Confusion matrix: rows = true, columns = predicted
 
 **What you will show**
-- [ ] Accuracy and macro F1 for both models
-- [ ] Both confusion matrices with musical explanation of confusions
-- [ ] LR weights for one or two genres
-- [ ] Verdict: which model won and how it fits the theory
+- [x] Accuracy and macro F1 for both models
+- [x] Both confusion matrices with musical explanation of confusions
+- [x] LR weights for one or two genres
+- [x] Verdict: which model won and how it fits the theory
 
 **Questions**
-- [ ] Why "naive"? Is independence true (energy vs loudness)?
-- [ ] When can NB beat LR?
-- [ ] What does softmax do?
-- [ ] Why macro F1 instead of only accuracy?
-- [ ] What does one off-diagonal cell mean?
+- [x] Why "naive"? Is independence true (energy vs loudness)?
+- [x] When can NB beat LR?
+- [x] What does softmax do?
+- [x] Why macro F1 instead of only accuracy?
+- [x] What does one off-diagonal cell mean?
 
 ## P4 – Amithav Sachin: Similar Songs (`P4_similar_songs.ipynb`)
 

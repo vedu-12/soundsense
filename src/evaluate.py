@@ -84,6 +84,7 @@ def plot_confusion_matrix(y_true, y_pred, labels, title="Confusion matrix", save
     else:
         fig = ax.figure
     im = ax.imshow(cm, cmap=cmap)
+    ax.grid(False)
     ax.set_xticks(range(len(labels)), labels, rotation=45, ha="right")
     ax.set_yticks(range(len(labels)), labels)
     ax.set_xlabel("Predicted genre" if len(labels) > 2 else "Predicted")
