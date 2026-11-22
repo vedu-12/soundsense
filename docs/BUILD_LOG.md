@@ -18,3 +18,19 @@
 - Checks run: all tests pass (6). Raw CSV has 114,000 rows.
 - Key numbers: 114,000 rows; 20 columns (+ unnamed index): track_id, artists, album_name, track_name, popularity, duration_ms, explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time_signature, track_genre. **114 unique genres** (briefs/proposal say 125; the real file has 114). Missing values: 1 each in artists, album_name, track_name (same row). Duplicate track_ids: 24,259.
 - Decisions I made: None (no cleaning yet). Raw CSV is git-ignored; test skips if absent so a fresh clone still passes.
+
+## Block 2: Choose the 6 genres  (commit see git log: "Block 2: choose the 6 genres")
+- Built: `tests/test_block2.py`; analysis run as a script (results below; the same tables are reproduced in the P1 notebook).
+- Checks run: all tests pass (7). Every one of the 114 genres has exactly 1,000 rows in the raw file.
+- Candidates compared (after removing cross-genre tracks, duplicate track_ids and same name+artist duplicates):
+  | set (metal variant) | tracks in >1 chosen genre | songs kept | hit rate ≥70 |
+  |---|---|---|---|
+  | heavy-metal | 16 | 4,267 | 8.9% |
+  | black-metal | 16 | 4,273 | 8.9% |
+  | death-metal | 16 | 4,256 | 8.9% |
+  | metal | 28 | 4,085 | 13.7% |
+- Mean features (heavy-metal set): energy classical 0.20 / jazz 0.37 / country 0.62 / hip-hop 0.69 / edm 0.75 / heavy-metal 0.87; acousticness classical 0.91 / jazz 0.67 / country 0.29 / hip-hop 0.22 / edm 0.12 / heavy-metal 0.02; speechiness highest for hip-hop (0.14); instrumentalness highest for classical (0.60). The genres clearly differ.
+- **Chosen genres: classical, country, edm, heavy-metal, hip-hop, jazz.** Reason: the default list from CLAUDE.md; `heavy-metal` picked as the metal genre because it has the fewest overlaps and loses the fewest songs to duplicates (986 of 1,000 kept) while sounding typical "metal" (unlike black/death metal, which are more extreme sub-styles).
+- **Hit threshold: popularity ≥ 70 (unchanged from the proposal)**: hit rate 8.9% ≥ 5%, so no fallback needed.
+- Key numbers: ~4,267 songs after cleaning, **fewer than the proposal's "~6,000"**, because many songs appear several times with different track_ids (e.g. jazz has 519 same name+artist duplicates: Christmas songs on many compilations; "Frosty The Snowman" by Ella Fitzgerald appears 34 times). Removing them is required by CLAUDE.md and prevents the same song landing in both train and test (leakage).
+- Decisions I made: heavy-metal as the metal genre; keep threshold 70.
