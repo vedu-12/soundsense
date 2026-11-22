@@ -34,3 +34,14 @@
 - **Hit threshold: popularity ≥ 70 (unchanged from the proposal)**: hit rate 8.9% ≥ 5%, so no fallback needed.
 - Key numbers: ~4,267 songs after cleaning, **fewer than the proposal's "~6,000"**, because many songs appear several times with different track_ids (e.g. jazz has 519 same name+artist duplicates: Christmas songs on many compilations; "Frosty The Snowman" by Ella Fitzgerald appears 34 times). Removing them is required by CLAUDE.md and prevents the same song landing in both train and test (leakage).
 - Decisions I made: heavy-metal as the metal genre; keep threshold 70.
+
+## Block 3: Data pipeline src/data.py  (commit see git log: "Block 3: data pipeline")
+- Built: `src/data.py` (`build_dataset`, `load_splits`, `load_all_songs`, `load_feature_names`, `load_scaler`, `scale_raw_features`; constants `GENRES`, `HIT_THRESHOLD=70`, `RANDOM_STATE=42`), `python -m src.data`, `data/processed/{songs.csv, scaler.joblib, feature_names.json, config.json}`, `tests/test_block3.py`, `pytest.ini`.
+- Checks run: 15 tests pass: popularity/hit/text/genre not in features; 4,267 songs; test share 20%; genre proportions train vs test within 1%; no NaNs; train means = 0 and stds = 1; hit label = popularity ≥ 70; no duplicate track_ids or name+artist; train/test disjoint.
+- Key numbers: 114,000 raw → 6,000 in chosen genres → −16 tracks in >1 chosen genre → −86 duplicate track_ids → −1,615 same name+artist duplicates → **4,267 songs** (heavy-metal 986, classical 806, hip-hop 727, edm 668, country 607, jazz 473). Train 3,413 / test 854. Hit rate train 9.2% / test 7.6% (split is stratified by genre only, as specified). 26 features.
+- Decisions I made:
+  - Features (26): 10 continuous audio features (danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration_ms) + explicit (0/1) + mode (0/1; a two-category one-hot needs one column) + key one-hot (11 columns, key C dropped as baseline, so the normal equation is not singular) + time_signature one-hot (time_sig_3, time_sig_5, time_sig_other; 4/4 is the baseline). **time_signature is kept, not dropped**: 4/4 is 88% overall but only 69% for classical, so it carries genre information; values 0 and 1 (1.2%) merged into "other".
+  - All 26 columns are standard-scaled (incl. one-hot), fit on train only.
+  - `AUDIO_FEATURES` (the 10 continuous ones) is also exported: distance-based **unsupervised** parts (PCA Song Map, DBSCAN, recommender) use these, because 11 scaled key dummies would otherwise dominate distances (two songs in different keys would look far apart regardless of sound). Supervised models use all 26 features.
+  - `load_all_songs()` returns a tuple (songs table, scaled X) with the same index, since the table has both original and scaled values of the same feature names.
+- **Pipeline is now FROZEN.**

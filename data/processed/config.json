@@ -1,0 +1,32 @@
+{
+  "genres": [
+    "classical",
+    "country",
+    "edm",
+    "heavy-metal",
+    "hip-hop",
+    "jazz"
+  ],
+  "hit_threshold": 70,
+  "random_state": 42,
+  "test_size": 0.2,
+  "audio_features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "duration_ms"
+  ],
+  "mood_features": [
+    "energy",
+    "valence",
+    "tempo",
+    "acousticness",
+    "danceability"
+  ]
+}
