@@ -1,0 +1,40 @@
+{
+  "pca_features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "duration_ms"
+  ],
+  "explained_variance_ratio": [
+    0.3647,
+    0.1438,
+    0.1059,
+    0.0943,
+    0.0886,
+    0.0792,
+    0.0519,
+    0.0437,
+    0.0199,
+    0.0081
+  ],
+  "n_components_90": 7,
+  "dbscan_eps": 2.56,
+  "dbscan_min_samples": 20,
+  "n_outliers": 59,
+  "pc1_top_loadings": [
+    "loudness",
+    "energy",
+    "acousticness"
+  ],
+  "pc2_top_loadings": [
+    "danceability",
+    "valence",
+    "duration_ms"
+  ]
+}

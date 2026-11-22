@@ -5,33 +5,33 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P1 – Aryan Danny: The Data & Song Map (`P1_data_song_map.ipynb`)
 
 **How it works**
-- [ ] 1. Cleaning: duplicate track_ids removed; text columns kept only for display
-- [ ] 2. Picking ~6 clearly different genres
-- [ ] 3. Encoding: key and mode one-hot encoded
-- [ ] 4. Scaling: standard scaling (mean 0, spread 1)
-- [ ] 5. Stratified 80/20 split, frozen and shared; scaler fit on train only
-- [ ] 6. PCA: compress features; first two components give the 2D Song Map
-- [ ] 7. DBSCAN: noise points = unusual songs highlighted on the map
+- [x] 1. Cleaning: duplicate track_ids removed; text columns kept only for display
+- [x] 2. Picking ~6 clearly different genres
+- [x] 3. Encoding: key and mode one-hot encoded
+- [x] 4. Scaling: standard scaling (mean 0, spread 1)
+- [x] 5. Stratified 80/20 split, frozen and shared; scaler fit on train only
+- [x] 6. PCA: compress features; first two components give the 2D Song Map
+- [x] 7. DBSCAN: noise points = unusual songs highlighted on the map
 
 **Concepts**
-- [ ] Data types: numeric vs categorical, why categories need encoding
-- [ ] Scaling: why distance-based models and PCA need it
-- [ ] Data leakage: why scaler is fit on training data only
-- [ ] PCA: covariance, directions of max variance, explained-variance ratio, scree plot
-- [ ] DBSCAN: eps, min_samples; core/border/noise points; no k needed; odd-shaped groups
+- [x] Data types: numeric vs categorical, why categories need encoding
+- [x] Scaling: why distance-based models and PCA need it
+- [x] Data leakage: why scaler is fit on training data only
+- [x] PCA: covariance, directions of max variance, explained-variance ratio, scree plot
+- [x] DBSCAN: eps, min_samples; core/border/noise points; no k needed; odd-shaped groups
 
 **What you will show**
-- [ ] Dataset summary: rows before/after cleaning, chosen genres, features
-- [ ] Correlation heatmap + feature distributions per genre
-- [ ] Scree plot: components for ~90% of the information
-- [ ] 2D Song Map with outliers marked + example unusual songs
+- [x] Dataset summary: rows before/after cleaning, chosen genres, features
+- [x] Correlation heatmap + feature distributions per genre
+- [x] Scree plot: components for ~90% of the information
+- [x] 2D Song Map with outliers marked + example unusual songs
 
 **Questions**
-- [ ] Why scale before PCA? Why fit the scaler only on the training set?
-- [ ] What does PC1 represent in our data?
-- [ ] How many components did we need, and what did we lose?
-- [ ] Why DBSCAN for outliers instead of k-means?
-- [ ] Why only 6 genres?
+- [x] Why scale before PCA? Why fit the scaler only on the training set?
+- [x] What does PC1 represent in our data?
+- [x] How many components did we need, and what did we lose?
+- [x] Why DBSCAN for outliers instead of k-means?
+- [x] Why only 6 genres?
 
 ## P2 – Gunneet Singh: Happiness Meter (`P2_happiness_meter.ipynb`)
 
