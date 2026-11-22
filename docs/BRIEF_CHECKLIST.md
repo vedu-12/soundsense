@@ -94,30 +94,30 @@ Every item from each teammate's section of `SoundSense – Team Briefs`. Items a
 ## P4 – Amithav Sachin: Similar Songs (`P4_similar_songs.ipynb`)
 
 **How it works**
-- [ ] 1. kNN recommender: 5 closest songs with their genres
-- [ ] 2. Euclidean vs cosine; how recommendations change
-- [ ] 3. kNN classifier: k = 1, 3, …, 25; accuracy vs k plot
-- [ ] 4. SVM: linear vs RBF, tune C and gamma with CV; multiclass via several two-genre SVMs
+- [x] 1. kNN recommender: 5 closest songs with their genres
+- [x] 2. Euclidean vs cosine; how recommendations change
+- [x] 3. kNN classifier: k = 1, 3, …, 25; accuracy vs k plot
+- [x] 4. SVM: linear vs RBF, tune C and gamma with CV; multiclass via several two-genre SVMs
 
 **Concepts**
-- [ ] kNN: lazy learner; small k overfits, large k underfits
-- [ ] Distance metrics: Euclidean vs cosine; why scaling is essential
-- [ ] Curse of dimensionality
-- [ ] SVM: hyperplane, margin, support vectors, soft margin and C
-- [ ] Kernel trick: RBF, gamma
+- [x] kNN: lazy learner; small k overfits, large k underfits
+- [x] Distance metrics: Euclidean vs cosine; why scaling is essential
+- [x] Curse of dimensionality
+- [x] SVM: hyperplane, margin, support vectors, soft margin and C
+- [x] Kernel trick: RBF, gamma
 
 **What you will show**
-- [ ] 2–3 recommender examples, Euclidean vs cosine side by side
-- [ ] Accuracy vs k plot and best k
-- [ ] Linear vs RBF SVM accuracy, effect of C
-- [ ] Share of 5 neighbours sharing the genre
+- [x] 2–3 recommender examples, Euclidean vs cosine side by side
+- [x] Accuracy vs k plot and best k
+- [x] Linear vs RBF SVM accuracy, effect of C
+- [x] Share of 5 neighbours sharing the genre
 
 **Questions**
-- [ ] Why is kNN lazy? What is slow?
-- [ ] How does k affect bias and variance?
-- [ ] What is a support vector? Removing a non-support vector?
-- [ ] Large vs small C
-- [ ] Kernel trick in one sentence
+- [x] Why is kNN lazy? What is slow?
+- [x] How does k affect bias and variance?
+- [x] What is a support vector? Removing a non-support vector?
+- [x] Large vs small C
+- [x] Kernel trick in one sentence
 
 ## P5 – Vedang Chinhalli: Hit Predictor (`P5_hit_predictor.ipynb`)
 
