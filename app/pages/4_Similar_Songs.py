@@ -15,7 +15,7 @@ ui.page_header("🎧", "Similar Songs", "Find songs that sound like the one you 
 
 c1, c2 = st.columns([3, 1.3], vertical_alignment="bottom")
 with c1:
-    sid = ui.song_picker("Pick a song", key="sim_picker", default_label="Without Me – Eminem")
+    sid = ui.song_picker("Pick a song", key="sim_picker", default_label="HUMBLE. – Kendrick Lamar")
 with c2:
     metric = st.segmented_control("Measure similarity by", ["Euclidean", "Cosine"], default="Euclidean", key="sim_metric") or "Euclidean"
 

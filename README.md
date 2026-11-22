@@ -130,5 +130,8 @@ All decisions, numbers and differences from the original proposal are recorded i
 - 4,267 songs instead of the proposal's "about 6,000": many songs appeared several times (re-releases, compilations) and were removed.
 - The hit threshold stayed at **popularity ≥ 70** as in the proposal (8.9% hits).
 - The test set was used once per final model; all tuning used 5-fold cross-validation on the training set.
+- Known small imperfection: 13 test songs (1.5%) are the same recording as a training song under a slightly different title. Removing them changes every score by at most 0.65 points (checked in P6), so no conclusion depends on it.
+- Popularity regression is the P2 bonus task (4 linear models, best R² 0.11); it is reported in `results/scores.csv` but not shown in the app's Model Arena, which covers the three main tasks.
+- In the app, each main song card says whether the song is an **unseen test song** or a **training song** (the models learned from training songs, so their predictions there are optimistic). The demo script uses test songs only.
 
 *Data: Spotify Tracks Dataset by maharshipandya (Hugging Face / Kaggle, BSD licence).*

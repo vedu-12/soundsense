@@ -14,7 +14,7 @@ P = ui.all_predictions()
 M = ui.load_models()
 
 ui.page_header("😊", "Happiness Meter", "How happy does a song sound? Our model guesses from the sound alone.")
-sid = ui.song_picker("Pick a song", key="happy_picker", default_label="Without Me – Eminem")
+sid = ui.song_picker("Pick a song", key="happy_picker", default_label="HUMBLE. – Kendrick Lamar")
 song = S.loc[sid]
 pred, real = 100 * P["valence"].loc[sid], 100 * song.valence
 

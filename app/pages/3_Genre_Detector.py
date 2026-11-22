@@ -14,7 +14,7 @@ S, X = ui.load_songs()
 P = ui.all_predictions()
 
 ui.page_header("🎸", "Genre Detector", "Which genre is it? Two models guess from the sound alone.")
-sid = ui.song_picker("Pick a song", key="genre_picker", default_label="Without Me – Eminem")
+sid = ui.song_picker("Pick a song", key="genre_picker", default_label="HUMBLE. – Kendrick Lamar")
 true_genre = S.loc[sid, "track_genre"]
 
 left, a, b = st.columns([1, 1.35, 1.35], gap="large")

@@ -247,12 +247,19 @@ def radar(song_id, height=190, compare_id=None, labels=True):
 
 
 def song_card(song_id, extra_html="", show_radar=True, show_mood=False, key=None, radar_height=180,
-              compare_id=None, radar_labels=True):
+              compare_id=None, radar_labels=True, show_split=None):
     S, _ = load_songs()
     row = S.loc[song_id]
+    if show_split is None:                       # main cards say whether the models saw this song in training
+        show_split = show_radar and radar_labels and compare_id is None
+    split_html = ""
+    if show_split:
+        split_html = ("<span class='ss-chip' title='The models never saw this song while training'>🆕 unseen test song</span>"
+                      if row.split == "test" else
+                      "<span class='ss-chip' title='The models learned from this song'>📚 training song</span>")
     with st.container(border=True):
         st.markdown(f"<div class='ss-title' title=\"{row.track_name}\">{row.track_name}</div>"
-                    f"<div class='ss-artist'>{row.artists_display}</div>{genre_chip(row.track_genre)}{extra_html}",
+                    f"<div class='ss-artist'>{row.artists_display}</div>{genre_chip(row.track_genre)}{split_html}{extra_html}",
                     unsafe_allow_html=True)
         if show_mood:
             st.markdown(mood_mix_html(song_id), unsafe_allow_html=True)

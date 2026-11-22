@@ -14,7 +14,7 @@ P = ui.all_predictions()
 prof = ui.load_json("models/p5_hit/hit_profile.json")
 
 ui.page_header("📈", "Hit Predictor", "Does it sound like a hit? A hit = Spotify popularity of 70 or more.")
-sid = ui.song_picker("Pick a song", key="hit_picker", default_label="Without Me – Eminem")
+sid = ui.song_picker("Pick a song", key="hit_picker", default_label="HUMBLE. – Kendrick Lamar")
 song = S.loc[sid]
 chance = P["hit"].loc[sid]
 base = prof["hit_rate"]

@@ -15,7 +15,7 @@ st.markdown("<div class='ss-purpose'>Genre, happiness, hit chance, mood and look
 
 # ------------------------------------------------------------------ analyze a song
 ui.section("🔎 Analyze a song")
-sid = ui.song_picker("Pick any of 4,267 songs", key="home_picker", default_label="Without Me – Eminem")
+sid = ui.song_picker("Pick any of 4,267 songs", key="home_picker", default_label="HUMBLE. – Kendrick Lamar")
 song = S.loc[sid]
 
 left, right = st.columns([1, 2.1], gap="large")
@@ -26,7 +26,7 @@ with right:
     top_genre = g.idxmax()
     c1, c2, c3 = st.columns(3)
     with c1:
-        ui.metric_card("Genre", top_genre, f"{g.max():.0%} sure")
+        ui.metric_card("Genre", top_genre, f"{g.max():.0%} sure · neural network")
         st.page_link("pages/3_Genre_Detector.py", label="see how", icon=":material/arrow_forward:")
     with c2:
         m = song.mood

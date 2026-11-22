@@ -17,7 +17,7 @@ ui.page_header("🗺️", "Song Map", "Every song as a dot: songs that sound ali
 
 c1, c2, c3 = st.columns([2.2, 1.2, 1.2], vertical_alignment="bottom")
 with c1:
-    sid = ui.song_picker("Find a song on the map", key="map_picker", default_label="Without Me – Eminem")
+    sid = ui.song_picker("Find a song on the map", key="map_picker", default_label="HUMBLE. – Kendrick Lamar")
 with c2:
     colour_by = st.segmented_control("Colour by", ["Genre", "Mood"], default="Genre", key="map_colour") or "Genre"
 with c3:
